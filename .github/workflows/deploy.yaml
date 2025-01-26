@@ -31,3 +31,5 @@ jobs:
         run: |
           aws s3 sync . s3://endlesscustoms.co --delete --exclude ".git/*" --exclude ".github/*" --exclude ".gitignore"
 
+      - name: Hello World
+        run: echo "Hello World"
