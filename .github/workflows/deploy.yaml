@@ -20,6 +20,19 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_S3_SECRET_ECC }}
           aws-region: us-west-1
 
+      - name: Verify AWS CLI
+        run: aws --version
+
+      - name: Debug AWS Credentials
+        run: |
+          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+          echo "AWS_REGION: $AWS_REGION"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_KEY_ECC }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_SECRET_ECC }}
+          AWS_REGION: us-west-1
+
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://endlesscustoms.co --delete
