@@ -2,19 +2,12 @@
 .git/
 .github/
 
-# Node.js (if applicable)
-node_modules/
-
 # Environment files
 .env
 
 # Logs and temp files
 *.log
 *.tmp
-
-# Build artifacts (if applicable)
-dist/
-build/
 
 # Miscellaneous
 .DS_Store
