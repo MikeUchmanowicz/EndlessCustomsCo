@@ -13,11 +13,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Update AWS CLI
-        run: |
-          sudo ./aws/install --update
-          aws --version  # Verify the updated version
-
       - name: Deploy to S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_KEY_ECC }}
