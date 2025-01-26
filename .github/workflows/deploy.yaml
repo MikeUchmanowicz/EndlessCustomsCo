@@ -29,4 +29,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-west-1  # Replace with your S3 bucket region
         run: |
-          aws s3 sync . s3://endlesscustoms.co --delete
+          aws s3 sync . s3://endlesscustoms.co --delete --exclude ".git/*" --exclude ".github/*" --exclude ".gitignore"
+
