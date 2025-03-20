@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Endless Customs</title>
+    <title>My Custom One-Pager</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <span style="font-size: 55px;">Endless Custom.Co Is under Development</span>
+    <script src="scripts.js"></script>
+
+    <div class="wrapper">
+        <div class="hero">
+            <div class="content">
+                <h1 class="title">Endless Customs</h1>
+                <div class="divider"></div>
+                <p class="tagline"> From Repairs to Performance <br> Endless Solutions Await </p>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="nav-btn" onclick="showModal('intro')">Intro</button>
+            <button class="nav-btn" onclick="showModal('work')">Work</button>
+            <button class="nav-btn" onclick="showModal('about')">About</button>
+            <button class="nav-btn" onclick="showModal('contact')">Contact</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="Intro" class="modal">Intro content goes here.</div>
+    <div id="work" class="modal">Work content goes here.</div>
+    <div id="about" class="modal">About content goes here.</div>
+    <div id="contact" class="modal">Contact content goes here.</div>
+
+    <script>
+        function showModal(id) {
+            document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
