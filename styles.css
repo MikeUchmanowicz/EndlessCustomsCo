@@ -43,7 +43,7 @@ img {
     padding: 2rem;
     gap: 2rem;
     position: relative;
-    top: -10vh;
+    top: -5vh;
 }
 
 .hero {
@@ -54,7 +54,7 @@ img {
 
 .content {
     background: rgba(0, 0, 0, 0.30);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
