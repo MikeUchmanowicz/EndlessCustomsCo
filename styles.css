@@ -13,6 +13,7 @@ body, html {
     min-height: 100vh;
     background: url('./images/mycar/car_dark.png') no-repeat center center fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -102,7 +103,13 @@ body, html {
     width: 80%;
     max-width: 400px;
 }
-
+.modal.visible {
+    display: block;
+  }
+  
+body.modal-open {
+    overflow: hidden;
+  }
 .footer {
     position: fixed;
     bottom: 0;
