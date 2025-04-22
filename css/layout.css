@@ -1,0 +1,94 @@
+/* ===== MAIN LAYOUT ===== */
+.wrapper {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    gap: 2.5rem;
+    position: relative;
+    top: -10vh;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 3rem 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ===== NAVIGATION ===== */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    min-width: 300px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(240, 245, 255, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1000;
+    padding: 0.5rem;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-section p {
+    color: #1b1f22;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+.social-media {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    color: #696969;
+}
+
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.3rem;
+}
+
+.instagram-tagline {
+    font-size: 0.75rem;
+    color: gray;
+    letter-spacing: .4rem;
+    font-weight: bold;
+}
