@@ -5,21 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>EndlessCustomsCo</title>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
         <!-- Preload the background image for faster loading -->
-        <link rel="preload" as="image" href="/images/car_dark.png">
+        <link rel="preload" as="image" href="/images/mycar/car_dark.png">
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
     </head>
 <body>
-    <script src="scripts.js"></script>
 
+    <script src="/js/main.js"></script>
     <div class="wrapper">
         <div class="hero">
             <div class="content">
                 <h1 class="title">Endless Customs</h1>
-                <div class="divider"></div>
+
                 <p class="tagline"> From Repairs to Performance,<br> Endless Solutions Await </p>
                 
                 <ul class="feature-list">
@@ -31,77 +30,194 @@
             </div>
         </div>
         <div class="navigation">
-            <button class="nav-btn" onclick="showModal('intro')">Intro</button>
-            <button class="nav-btn" onclick="showModal('work')">Work</button>
             <button class="nav-btn" onclick="showModal('about')">About</button>
+            <button class="nav-btn" onclick="showModal('work')">Work</button>
             <button class="nav-btn" onclick="showModal('contact')">Contact</button>
         </div>
     </div>
-
+    <div class="modal-overlay"></div>
     <!-- Modals -->
-    <div id="intro" class="modal">Intro content goes here.</div>
-    <!-- Intro Modal -->
-    <div id="intro" class="modal">
-        <div class="modal-inner">
-            <h1 class="modal-title">Professional Info</h1>
-            <ul class="modal-list">
-                <li><span class="modal-list-title">Name:</span> Michal Uchmanowicz</li>
-                <li><span class="modal-list-title">Title:</span> Software Developer / Architect</li>
-                <li><span class="modal-list-title">Location:</span> Phoenix, AZ</li>
-                <li><span class="modal-list-title">Languages:</span> English (Native), Polish (Professional Working Proficiency)</li>
-                <li><span class="modal-list-title">Education:</span> B.S. in Software Development, Grand Canyon University (GPA: 3.97, May 2023)</li>
-                <li><span class="modal-list-title">Awards:</span> Distinguished Trustee Scholarship, William Rainey Harper College</li>
-                <li><span class="modal-list-title">Workplace:</span> One of two Developers at Hoffenmer Inc. — 
-                    Building internal tools, APIs, and full-stack platforms for DOT paperwork automation</li>
-                <li><span class="modal-list-title">Past Roles:</span> Transportation Consultant & Consortium Admin Asst. at Hoffenmer Inc. (2019–2023)</li>
-                <li><span class="modal-list-title">Software Languages:</span> Python, Java, C#, JavaScript, HTML/CSS, SQL, C++</li>
-                <li><span class="modal-list-title">Frameworks & Libraries:</span> FastAPI,Django, Spring Boot, ASP.NET, Angular, Express, .NET Core, Bootstrap</li>
-                <li><span class="modal-list-title">Concepts & Patterns:</span> OOP, IoC, SoC, N-Layer Architecture, MVC, REST APIs, Agile/Scrum, SDLC</li>
-                <li><span class="modal-list-title">Databases:</span> MySQL, MongoDB, PHPMyAdmin, Workbench, Compass</li>
-                <li><span class="modal-list-title">Cloud & DevOps:</span> AWS, Google Cloud, Azure, Heroku, Docker, Pipelines</li>
-                <li><span class="modal-list-title">Tools:</span> GitHub, Postman, Jira, Maven, MAMP, NodeJS, JUnit, Linux Terminal</li>
-                <li><span class="modal-list-title">Data Structures:</span> Linked Lists, Stacks, Hash Tables, BSTs, Recursion, DFS</li>
-                <li>
-                    <span class="modal-list-title">Work Experience:</span><br>
-                    Hoffenmer Inc., Software Developer<br>
-                    <i>Apr 2023 - Present | Scottsdale, AZ</i><br>
-                    <p>
-                    Responsible for building and maintaining internal software for agents in DOT paperwork processing. This included a central GUI application for agent management, client SMS/MMS communication, call logging, and workflow tracking with integrated data storage. Built secure AWS-hosted APIs for automation, third-party integrations, static file hosting, and webhooks (like handling client SMS/MMS within the beforementioned central app). Also created additional GUI tools for sales tracking and performance monitoring while ensuring system scalability, security, and seamless third-party integrations.
-                    </p>
-                </li>
-            </ul>
-        
-            
-            <span class="modal-reference">Please see my <a onclick="showModal('contact')" href="#">contact</a> page to contact me or connect with me.</span>
-
-            <div class="modal-button-container">
-                <button class="download-btn" onclick="downloadResume()">Download Resume</button>
-                <button class="close-btn" onclick="closeModal()">Close</button>
-            </div>
-        </div>
-        <div class="modal-scroll-area"></div>
-    </div>
-
-    <!-- About Modal -->
     <div id="about" class="modal">
         <div class="modal-inner">
             <h1 class="modal-title">About Us</h1>
             <p>
-                I'm Michal Uchmanowicz, a software developer with a strong foundation in full-stack development, cloud infrastructure, and scalable internal tooling.
-                I earned my B.S. in Software Development from Grand Canyon University with a 3.97 GPA and a passion for building efficient, reliable systems — from Dockerized webapps on AWS to embedded systems experiments.
-                Currently, I serve as one of two developers at Hoffenmer Inc., where I architect and maintain a comprehensive internal platform for managing DOT compliance workflows, client communication, and automation.
-                My stacks generally include Python, Java, JavaScript, FastAPI, Django, Spring Boot, and AWS — and I'm always eager to tackle complex, real-world challenges.
+                Welcome to Endless Customs Co, where passion meets precision. We're a team of three automotive enthusiasts who turned our shared love for cars into a full-service customization shop. What started as a solution to our own automotive needs has evolved into a comprehensive service offering for fellow enthusiasts.
             </p>
             <p>
-                Outside of work, I run a car customization side business at <a href="https://endlesscustoms.co" target="_blank">Endless Customs Co</a>, where I wrench on my ~650hp single-turbo E93 BMW 335i powered by a Precision 6266 and E85.
-                I'm mechanically savvy, detail-obsessed, and hands-on — whether it's software or hardware.
-                I also enjoy basketball, reggae music, and diving into topics like machine learning and embedded tech. Recently i've purchased an insta360 x3 and have been diving into the world of 360 video production. 
+                Our expertise spans the full spectrum of automotive customization:
             </p>
-
+            <ul class="modal-list">
+                <li>• Mechanical Work & Engine Rebuilds</li>
+                <li>• Body & Paint Services</li>
+                <li>• Engine & Frame Swaps</li>
+                <li>• Truck Bed Conversions</li>
+                <li>• Custom Welding & Fabrication</li>
+                <li>• Powdercoating Services</li>
+            </ul>
+            <p>
+                We've developed our skills through hands-on experience with German, JDM, and American. Our shop is built on on a common passion for automotive excellence and attention to detail. We love what we do, and it shows in every project we take on.
+            </p>
+            <p>
+                Whether you're looking to restore a classic, modify a modern vehicle, or create something entirely unique, we bring our combined knowledge and dedication to every project. At Endless Customs Co, we don't just work on cars – we build dreams.
+            </p>
             
-            <span class="modal-reference">Please see my <a onclick="showModal('contact')" href="#">contact</a> page to contact me or connect with me.</span>
+            <span class="modal-reference">Please see our <a onclick="showModal('contact')" href="#">contact</a> page to get in touch with us.</span>
             
             <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+        <div class="modal-scroll-area"></div>
+    </div>
+    <!-- Intro Modal -->
+    <div id="work" class="modal">
+        <div class="modal-inner">
+            <h1 class="modal-title">Work Gallery</h1>
+            <!-- Welding Gallery -->
+            <div class="gallery-section">
+              <h2>Welding</h2>
+              <div class="gallery-flex">
+                <img src="images/Welding/floor_hole1.jpeg" alt="Welding 1" loading="lazy">
+                <img src="images/Welding/floor_hole2.jpeg" alt="Welding 2" loading="lazy">
+                <img src="images/Welding/floor_hole3.jpeg" alt="Welding 3" loading="lazy">
+                <img src="images/Welding/floor_hole4.jpeg" alt="Welding 4" loading="lazy">
+                <img src="images/Welding/floor_hole5.jpeg" alt="Welding 5" loading="lazy">
+                <img src="images/Welding/floor_hole6.jpeg" alt="Welding 6" loading="lazy">
+                <img src="images/Welding/mike_tubefront3.jpeg" alt="Welding 7" loading="lazy">
+                <img src="images/Welding/mike_tubefront4.jpeg" alt="Welding 8" loading="lazy">
+                
+                <img src="images/Conversions/shortbed4.jpeg" alt="Conversions 1" loading="lazy">
+                <img src="images/Conversions/shortbed5.jpeg" alt="Conversions 2" loading="lazy">
+                <img src="images/Conversions/shortbed6.jpeg" alt="Conversions 3" loading="lazy">
+                <img src="images/Conversions/shortbed7.jpeg" alt="Conversions 4" loading="lazy">
+                <img src="images/Conversions/shortbed8.jpeg" alt="Conversions 5" loading="lazy">
+                <img src="images/Conversions/shortbed9.jpeg" alt="Conversions 6" loading="lazy">
+                <img src="images/Conversions/shortbed10.jpeg" alt="Conversions 7" loading="lazy">
+                <img src="images/Conversions/shortbed11.jpeg" alt="Conversions 8" loading="lazy">
+                <img src="images/Conversions/shortbed12.jpeg" alt="Conversions 9" loading="lazy">
+                <img src="images/Conversions/shortbed13.jpeg" alt="Conversions 10" loading="lazy">
+                <img src="images/Conversions/shortbed14.jpeg" alt="Conversions 11" loading="lazy">
+                <img src="images/Conversions/shortbed15.jpeg" alt="Conversions 12" loading="lazy">
+                <img src="images/Conversions/shortbed16.jpeg" alt="Conversions 13" loading="lazy">
+                <img src="images/Conversions/shortbed17.jpeg" alt="Conversions 14" loading="lazy">
+                <img src="images/Conversions/shortbed18.jpeg" alt="Conversions 15" loading="lazy">
+                <img src="images/Conversions/shortbed19.jpeg" alt="Conversions 16" loading="lazy">
+                <img src="images/Conversions/shortbed20.jpeg" alt="Conversions 17" loading="lazy">
+                <img src="images/Conversions/shortbed21.jpeg" alt="Conversions 18" loading="lazy">
+                <img src="images/Conversions/shortbed22.jpeg" alt="Conversions 19" loading="lazy">
+                <img src="images/Conversions/shortbed23.jpeg" alt="Conversions 20" loading="lazy">
+                <img src="images/Conversions/shortbed24.jpeg" alt="Conversions 21" loading="lazy">
+              
+            </div>
+            </div>
+            <!-- Paint Gallery -->
+            <div class="gallery-section">
+              <h2>Paint</h2>
+              <div class="gallery-flex">
+                <img src="images/Paint/toyota1.jpeg" alt="Paint 1" loading="lazy">
+                <img src="images/Paint/toyota2.jpeg" alt="Paint 2" loading="lazy">
+                <img src="images/Paint/toyota3.jpeg" alt="Paint 3" loading="lazy">
+                <img src="images/Paint/toyota4.jpeg" alt="Paint 4" loading="lazy">
+                <img src="images/Paint/toyota5.jpeg" alt="Paint 5" loading="lazy">
+                <img src="images/Paint/toyota6.jpeg" alt="Paint 6" loading="lazy">
+                <img src="images/Paint/toyota7.jpeg" alt="Paint 7" loading="lazy">
+                <img src="images/Paint/van1.jpeg" alt="Paint 8" loading="lazy">
+                <img src="images/Paint/van2.jpeg" alt="Paint 9" loading="lazy">
+                <img src="images/Paint/van3.jpeg" alt="Paint 10" loading="lazy">
+              </div>
+            </div>
+            <!-- Mechanical Gallery -->
+            <div class="gallery-section">
+              <h2>Mechanical</h2>
+              <div class="gallery-flex">
+                <img src="images/Mechanical/corvette1.jpeg" alt="Mechanical 1" loading="lazy">
+                <img src="images/Mechanical/corvette2.jpeg" alt="Mechanical 2" loading="lazy">
+                <img src="images/Mechanical/corvette3.jpeg" alt="Mechanical 3" loading="lazy">
+                <img src="images/Mechanical/corvette4.jpeg" alt="Mechanical 4" loading="lazy">
+                <img src="images/Mechanical/corvette5.jpeg" alt="Mechanical 5" loading="lazy">
+                <img src="images/Mechanical/porsche_exh.jpeg" alt="Mechanical 6" loading="lazy">
+                <img src="images/Mechanical/porsche_exh2.jpeg" alt="Mechanical 7" loading="lazy">
+                <img src="images/Mechanical/random1.jpeg" alt="Mechanical 8" loading="lazy">
+                <img src="images/Mechanical/random2.jpeg" alt="Mechanical 9" loading="lazy">
+              </div>
+            </div>
+            <!-- Projects Gallery -->
+            <div class="gallery-section">
+              <h2>Projects</h2>
+              <div class="gallery-flex">
+                <img src="images/Projects/240.jpeg" alt="Projects 1" loading="lazy">
+                <img src="images/Projects/240s.jpeg" alt="Projects 2" loading="lazy">
+                <img src="images/Projects/240s2.jpeg" alt="Projects 3" loading="lazy">
+                <img src="images/Projects/240s3.jpeg" alt="Projects 4" loading="lazy">
+                <img src="images/Projects/240s4.jpeg" alt="Projects 5" loading="lazy">
+                <img src="images/Projects/mike_tubefront.jpeg" alt="Projects 6" loading="lazy">
+                <img src="images/Projects/mike_tubefront2.jpeg" alt="Projects 7" loading="lazy">
+                <img src="images/Projects/mike_tubefront3.jpeg" alt="Projects 8" loading="lazy">
+                <img src="images/Projects/mike_tubefront4.jpeg" alt="Projects 9" loading="lazy">
+                <img src="images/Projects/mike_tubs.jpeg" alt="Projects 10" loading="lazy">
+                <img src="images/Projects/mike_tubs2.jpeg" alt="Projects 11" loading="lazy">
+              </div>
+            </div>
+            <!-- Body Gallery -->
+            <div class="gallery-section">
+              <h2>Body</h2>
+              <div class="gallery-flex">
+                <img src="images/Body/drift1.jpeg" alt="Body 1" loading="lazy">
+                <img src="images/Body/drift2.jpeg" alt="Body 2" loading="lazy">
+                <img src="images/Body/lc1.jpeg" alt="Body 3" loading="lazy">
+                <img src="images/Body/lc2.jpeg" alt="Body 4" loading="lazy">
+                <img src="images/Body/lc3.jpeg" alt="Body 5" loading="lazy">
+                <img src="images/Body/lc4.jpeg" alt="Body 6" loading="lazy">
+                <img src="images/Body/lc5.jpeg" alt="Body 7" loading="lazy">
+                <img src="images/Body/toyota1.jpeg" alt="Body 8" loading="lazy">
+                <img src="images/Body/toyota2.jpeg" alt="Body 9" loading="lazy">
+                <img src="images/Body/toyota3.jpeg" alt="Body 10" loading="lazy">
+                <img src="images/Body/toyota4.jpeg" alt="Body 11" loading="lazy">
+                <img src="images/Body/toyota5.jpeg" alt="Body 12" loading="lazy">
+                <img src="images/Body/toyota6.jpeg" alt="Body 13" loading="lazy">
+                <img src="images/Body/toyota7.jpeg" alt="Body 14" loading="lazy">
+                <img src="images/Body/van1.jpeg" alt="Body 15" loading="lazy">
+                <img src="images/Body/van2.jpeg" alt="Body 16" loading="lazy">
+                <img src="images/Body/van3.jpeg" alt="Body 17" loading="lazy">
+              </div>
+            </div>
+            <!-- Frame Gallery -->
+            <div class="gallery-section">
+              <h2>Frame</h2>
+              <div class="gallery-flex">
+                <img src="images/Frame/chevy_frame1.jpeg" alt="Frame 1" loading="lazy">
+                <img src="images/Frame/chevy_frame2.jpeg" alt="Frame 2" loading="lazy">
+                <img src="images/Frame/chevy_frame3.jpeg" alt="Frame 3" loading="lazy">
+                <img src="images/Frame/chevy_frame4.jpeg" alt="Frame 4" loading="lazy">
+                <img src="images/Frame/drift1.jpeg" alt="Frame 5" loading="lazy">
+                <img src="images/Frame/drift2.jpeg" alt="Frame 6" loading="lazy">
+              </div>
+            </div>
+            <!-- Conversions Gallery -->
+            <div class="gallery-section">
+              <h2>Conversions</h2>
+              <div class="gallery-flex">
+                <img src="images/Conversions/shortbed4.jpeg" alt="Conversions 1" loading="lazy">
+                <img src="images/Conversions/shortbed5.jpeg" alt="Conversions 2" loading="lazy">
+                <img src="images/Conversions/shortbed6.jpeg" alt="Conversions 3" loading="lazy">
+                <img src="images/Conversions/shortbed7.jpeg" alt="Conversions 4" loading="lazy">
+                <img src="images/Conversions/shortbed8.jpeg" alt="Conversions 5" loading="lazy">
+                <img src="images/Conversions/shortbed9.jpeg" alt="Conversions 6" loading="lazy">
+                <img src="images/Conversions/shortbed10.jpeg" alt="Conversions 7" loading="lazy">
+                <img src="images/Conversions/shortbed11.jpeg" alt="Conversions 8" loading="lazy">
+                <img src="images/Conversions/shortbed12.jpeg" alt="Conversions 9" loading="lazy">
+                <img src="images/Conversions/shortbed13.jpeg" alt="Conversions 10" loading="lazy">
+                <img src="images/Conversions/shortbed14.jpeg" alt="Conversions 11" loading="lazy">
+                <img src="images/Conversions/shortbed15.jpeg" alt="Conversions 12" loading="lazy">
+                <img src="images/Conversions/shortbed16.jpeg" alt="Conversions 13" loading="lazy">
+                <img src="images/Conversions/shortbed17.jpeg" alt="Conversions 14" loading="lazy">
+                <img src="images/Conversions/shortbed18.jpeg" alt="Conversions 15" loading="lazy">
+                <img src="images/Conversions/shortbed19.jpeg" alt="Conversions 16" loading="lazy">
+                <img src="images/Conversions/shortbed20.jpeg" alt="Conversions 17" loading="lazy">
+                <img src="images/Conversions/shortbed21.jpeg" alt="Conversions 18" loading="lazy">
+                <img src="images/Conversions/shortbed22.jpeg" alt="Conversions 19" loading="lazy">
+                <img src="images/Conversions/shortbed23.jpeg" alt="Conversions 20" loading="lazy">
+                <img src="images/Conversions/shortbed24.jpeg" alt="Conversions 21" loading="lazy">
+              </div>
+            </div>
         </div>
         <div class="modal-scroll-area"></div>
     </div>
@@ -111,12 +227,23 @@
         <div class="modal-inner">
             <h1 class="modal-title">Contact</h1>
             <div class="links">
-                <a href="#" onclick="downloadResume()">Resume</a>
-                <a href="https://www.facebook.com/MikeUchmanowicz/" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://www.instagram.com/mike.uch/" target="_blank" rel="noopener">Instagram</a>
                 <a href="https://www.instagram.com/endlesscustomsco/" target="_blank" rel="noopener">ECC Instagram</a>
             </div>
+
+            <iframe 
+                id="map"
+                class="map"
+                width="100%" 
+                height="400px" 
+                style="border:0; border-radius: 10px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=25+E+Vine+Ave+Mesa+AZ+85210&output=embed">
+            </iframe>
+
             <div class="contact-info">
+                <span><b>Address:</b> <a href="https://www.google.com/maps/search/?api=1&query=25+E+Vine+Ave+Mesa+AZ+85210" target="_blank" rel="noopener">25 E Vine Ave Mesa, Az 85210 USA</a></span>
                 <span><b>Email:</b> <a href="mailto:Mike.Uchmanowicz@gmail.com">Mike.Uchmanowicz@gmail.com</a></span>
                 <span><b>Phone:</b> <a href="tel:+18477040455">(847) 704-0455</a></span>
             </div>
@@ -141,5 +268,15 @@
         </div>
 
     </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-caption"></div>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+    </div>
+
 </body>
 </html>

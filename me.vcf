@@ -1,10 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Uchmanowicz;Michal;;;
-FN:Michal Uchmanowicz
-TITLE:Software Developer / Solutions Architect
-ORG:Endless Customs Co
-TEL;TYPE=CELL:+1-847-704-0455
-EMAIL:Mike.Uchmanowicz.com
-URL:https://endlesscustoms.co
+FN:Mike Uchmanowicz
+N:Uchmanowicz;Mike;;;
+TITLE: General Mechanic
+TEL;TYPE=CELL:+18477040455
+EMAIL;TYPE=WORK:endlesscustomsco@gmail.com
+URL;TYPE=CARWORK:https://EndlessCustoms.co
+URL;TYPE=MYSITE:https://MikeUch.Me
+NOTE:Mechanical, Body, Paint, Engine Swaps, Rebuilds, Frame Swaps, Truck Bed Conversions, Welding, Fabrication, Powdercoating
 END:VCARD

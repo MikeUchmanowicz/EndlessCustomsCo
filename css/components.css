@@ -132,13 +132,13 @@ body.modal-open .footer {
     opacity: 0;
     position: fixed;
     left: 50%;
-    top: 45%;
+    top: 50%;
     transform: translate(-50%, -50%);
     background: #1b1f22;
     padding: 3rem;
     border-radius: 10px;
-    width: 90%;
-    max-width: 90vw;
+    width: 90vw;
+    max-width: 1200px;
     max-height: 95vh;
     z-index: 1001;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -156,38 +156,29 @@ body.modal-open .footer {
     justify-content: flex-start;
     gap: 2rem;
     min-width: 200px;
-    align-items: flex-start;
+    align-items: center;
     overflow-y: auto;
-
+    padding-right: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-/* Remove scroll area for desktop */
-.modal-scroll-area {
-    display: none;
+.modal-inner::-webkit-scrollbar {
+    width: 5px;
 }
 
-/* Custom scrollbar styling */
-.modal-scroll-area::-webkit-scrollbar {
-    width: 8px;
-}
-
-.modal-scroll-area::-webkit-scrollbar-track {
+.modal-inner::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.modal-scroll-area::-webkit-scrollbar-thumb {
-    background: #0088CA;
-    border-radius: 5px;
+.modal-inner::-webkit-scrollbar-thumb {
+    background: rgba(49, 163, 230, 0.1);
+    border-radius: 4px;
 }
 
-.modal-scroll-area::-webkit-scrollbar-thumb:hover {
-    background: #006699;
-}
-
-/* Firefox scrollbar styling */
 .modal-scroll-area {
-    scrollbar-width: thin;
-    scrollbar-color: #0088CA #1b1f22;
+    display: none;
 }
 
 .modal.visible {
@@ -267,7 +258,7 @@ body.modal-open .footer {
     line-height: 1.5;
     font-size: 1.1rem;
     margin: 0;
-    letter-spacing: .25rem;
+    letter-spacing: .15rem;
     text-align: justify;
     text-justify: inter-word; /* improves spacing */
     overflow-wrap: break-word;
@@ -304,8 +295,11 @@ body.modal-open .footer {
     transform: translateY(-100%);
 }
 
+#about {
+    top: 45%;
+}
 #contact {
-    top: 35%;
+    top: 50%;
 }
 
 #contact .contact-info {
@@ -351,5 +345,173 @@ body.modal-open .footer {
     background: #006699;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-flex img {
+    width: 160px;
+    height: 120px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background: #222;
+    transition: transform 0.2s;
+    margin: 0;
+}
+
+.gallery-flex img:hover {
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+@media (min-width: 900px) {
+    .modal {
+        max-width: 1400px;
+    }
+}
+
+.modal-inner, .gallery-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ===== LIGHTBOX MODAL FOR GALLERY ===== */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.3s;
+}
+.lightbox-modal.active {
+    display: flex;
+}
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.7);
+    background: #222;
+    display: block;
+    margin: 2rem 0 1rem 0;
+}
+.lightbox-caption {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 90vw;
+    word-break: break-word;
+}
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2010;
+    transition: color 0.2s;
+}
+.lightbox-close:hover {
+    color: #0088CA;
+}
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2010;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: color 0.2s;
+}
+.lightbox-prev:hover, .lightbox-next:hover,
+.lightbox-prev:focus, .lightbox-next:focus {
+    color: #0088CA;
+}
+.lightbox-prev {
+    left: 2rem;
+    right: auto;
+}
+.lightbox-next {
+    right: 2rem;
+    left: auto;
+}
+@media (max-width: 600px) {
+    .lightbox-image {
+        max-width: 98vw;
+        max-height: 60vh;
+    }
+    .lightbox-caption {
+        font-size: 1rem;
+    }
+    .lightbox-prev, .lightbox-next {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+    }
+    .lightbox-prev {
+        left: 0.5rem;
+        right: auto;
+    }
+    .lightbox-next {
+        right: 0.5rem;
+        left: auto;
+    }
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .gallery-flex {
+        justify-content: center;
+    }
 }
 
