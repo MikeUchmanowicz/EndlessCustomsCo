@@ -408,6 +408,8 @@ body.modal-open .footer {
     display: block;
     margin: 2rem 0 1rem 0;
 }
+
+
 .lightbox-caption {
     color: #fff;
     font-size: 1.2rem;
@@ -431,7 +433,7 @@ body.modal-open .footer {
     color: #0088CA;
 }
 .lightbox-prev, .lightbox-next {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     width: 48px;
@@ -444,23 +446,23 @@ body.modal-open .footer {
     font-weight: bold;
     cursor: pointer;
     user-select: none;
-    z-index: 2010;
+    z-index: 3000;
     background: transparent;
     border-radius: 50%;
     box-shadow: none;
     transition: color 0.2s;
+    padding: 0;
+    text-align: center;
 }
 .lightbox-prev:hover, .lightbox-next:hover,
 .lightbox-prev:focus, .lightbox-next:focus {
     color: #0088CA;
 }
 .lightbox-prev {
-    left: 2rem;
-    right: auto;
+    left: 16px;
 }
 .lightbox-next {
-    right: 2rem;
-    left: auto;
+    right: 16px;
 }
 @media (max-width: 600px) {
     .lightbox-image {
@@ -476,12 +478,10 @@ body.modal-open .footer {
         font-size: 1.5rem;
     }
     .lightbox-prev {
-        left: 0.5rem;
-        right: auto;
+        left: 4px;
     }
     .lightbox-next {
-        right: 0.5rem;
-        left: auto;
+        right: 4px;
     }
     .lightbox-close {
         top: 1rem;
