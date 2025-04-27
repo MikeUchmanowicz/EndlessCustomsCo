@@ -5,7 +5,6 @@
     margin: 0;
     text-transform: uppercase;
     background: linear-gradient(40deg, #0088CA, #f0f5ff);
-    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0088CA;
@@ -68,9 +67,8 @@ button:hover {
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 2rem;
-    -webkit-appearance: none;
     appearance: none;
-    width: 14rem;
+    width: 15rem;
 }
 
 /* ===== MODAL OVERLAY ===== */
@@ -84,44 +82,36 @@ button:hover {
     bottom: 0;
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
     z-index: 1000;
-    transition: opacity 0.35s ease, backdrop-filter 0.35s ease, -webkit-backdrop-filter 0.35s ease;
+    transition: opacity 0.35s ease, backdrop-filter 0.35s ease;
 }
 
-/* Show the overlay when modal is open */
 body.modal-open .modal-overlay {
     display: block;
     opacity: 1;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
-/* Add transition for body content */
 body {
     transition: all 0.35s ease;
 }
 
-/* Keep the scale effect for content */
 body.modal-open .wrapper {
     transform: scale(0.90);
     transform-origin: center;
 }
 
-/* Add blur effect to wrapper */
 .wrapper {
     transition: all 0.35s ease;
     will-change: transform;
     transform-origin: center;
 }
 
-/* Footer styles */
 .footer {
     transition: all 0.35s ease;
     width: 100%;
 }
 
-/* Remove the footer scale */
 body.modal-open .footer {
     filter: blur(5px);
 }
@@ -153,15 +143,14 @@ body.modal-open .footer {
 .modal-inner {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 2rem;
-    min-width: 200px;
     align-items: center;
     overflow-y: auto;
     padding-right: 1.5rem;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    min-width: 200px;
+    gap: 2rem;
 }
 
 .modal-inner::-webkit-scrollbar {
@@ -177,14 +166,9 @@ body.modal-open .footer {
     border-radius: 4px;
 }
 
-.modal-scroll-area {
-    display: none;
-}
-
 .modal.visible {
     opacity: 1;
     pointer-events: auto;
-
 }
 
 .modal-title {
@@ -239,8 +223,6 @@ body.modal-open .footer {
     font-size: 1.1rem;
 }
 
-/* Right-align close buttons for intro and about modals */
-
 #about .close-btn {
     align-self: flex-end;
     margin-left: auto;
@@ -260,13 +242,12 @@ body.modal-open .footer {
     margin: 0;
     letter-spacing: .15rem;
     text-align: justify;
-    text-justify: inter-word; /* improves spacing */
+    text-justify: inter-word;
     overflow-wrap: break-word;
     word-break: break-word;
     white-space: normal;
 }
 
-/* Download Notice */
 .download-notice {
     position: absolute;
     top: 0;
@@ -299,7 +280,7 @@ body.modal-open .footer {
     top: 45%;
 }
 #contact {
-    top: 50%;
+    top: 45%;
 }
 
 #contact .contact-info {
@@ -353,11 +334,11 @@ body.modal-open .footer {
     flex-direction: row;
     gap: 1.5rem;
     width: 100%;
-
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 .gallery-flex img {
@@ -508,8 +489,7 @@ body.modal-open .footer {
         font-size: 2rem;
     }
 }
-
-@media (max-width: 530px) {
+@media (max-width: 500px) {
     .gallery-flex {
         justify-content: center;
     }
